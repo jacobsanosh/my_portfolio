@@ -1,13 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100;200;300;400;500&family=Inter+Tight:ital,wght@0,100;0,200;1,100;1,200&family=Manrope:wght@200;300;400;500;600;700;800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oxygen:wght@300;400;700&family=Roboto:wght@100&family=Ubuntu:wght@500&display=swap');
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* background: radial-gradient(200.65% 776.86% at -9.28% 116.91%,#140915 35.44%,var(--themeColour) 100%); */
+    /* background: radial-gradient( 200.65% 776.86% at -9.28% 116.91%, #140915 15.44%, #80489C 100%); */
+    /* background: #1A1617; */
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+    color: white;
+    margin-bottom: 10rem;
 }
 
+
+/* #ad5389 */
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: var(--primary-font)
+}
+
+ :root {
+    /* --themeColour: #2cb7c7; */
+    /* --themeColour: radial-gradient(
+      200.65% 776.86% at -9.28% 116.91%,
+      #904e95 15.44%,
+      #3c1053 100%
+    ); */
+    --themeColour: #AA076B;
+    --secondaryColor: #F74670;
+    --primary-font: "Montserrat", sans-serif;
+    --backgroundColorCard: #191617;
+}
+
+
+/* * {
+    outline: 2px solid green;
+} */
+
+.section__title {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.section__title>h1 {
+    color: #F74670;
+    font-family: var(--primary-font);
+    font-size: 2rem;
+}
+
+@media screen and (max-width: 590px) {
+    .section__title>img {
+        display: none;
+    }
 }

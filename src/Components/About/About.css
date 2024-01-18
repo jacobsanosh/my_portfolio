@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100;300;700;800;900&display=swap');
+.about__div {
+    width: 80%;
+    margin: auto;
+}
+
+.about__me {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3rem;
+}
+
+.scoaial__media {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.scoaial__media a {
+    color: white;
+    font-size: 2rem;
+}
+
+.social__let {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+
+
+/* .scoaial__media a:hover {
+    text-decoration: underline;
+} */
+
+.scoaial__media a {
+    display: inline-block;
+    position: relative;
+    color: white;
+}
+
+.scoaial__media a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.scoaial__media a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}

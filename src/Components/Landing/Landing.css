@@ -1,0 +1,44 @@
+.landing__div {
+    width: 90%;
+    margin-top: 5rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3rem;
+    margin: auto;
+}
+
+.landing__img {
+    width: 30rem;
+    border-radius: 50%;
+    height: 40rem;
+}
+
+.langing__dot {
+    position: absolute;
+    height: 5rem;
+}
+
+.landing__div h1 {
+    font-size: 8rem;
+}
+
+.landing__top {
+    margin-top: -15rem;
+}
+
+.landing__bottom {
+    margin-top: 25rem;
+}
+
+
+/* 
+
+
+
+
+
+
+ */

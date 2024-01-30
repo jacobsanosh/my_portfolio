@@ -3,3 +3,76 @@
     margin: 5rem auto;
     text-align: center;
 }
+
+.work__card {
+    width: 100%;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+.work__card img {
+    width: 100%;
+    height: 50rem;
+    background-size: cover;
+    box-sizing: border-box;
+    transition: all 1.1s;
+}
+
+.work__card:hover img {
+    transform: scale(1.01);
+    opacity: 0.5;
+}
+
+.work__card:hover .overlay {
+    opacity: 1;
+}
+
+.my__works h1 {
+    margin-top: 5rem;
+}
+
+.horizontal-line {
+    border: 1px solid white;
+    margin: 10px 0;
+}
+
+.work__card hr {
+    margin: 2rem auto;
+}
+
+.popup__div {
+    width: 60%!important;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    box-sizing: border-box;
+    transition: all 1.1s;
+    opacity: 0;
+    /* Start with opacity 0 */
+}
+
+.overlay h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.overlay p {
+    font-size: 2rem;
+}
+
+.overlay:hover {
+    opacity: 1;
+}

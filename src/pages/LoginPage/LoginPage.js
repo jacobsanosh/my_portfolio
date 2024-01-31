@@ -1,85 +1,89 @@
-import React, { useState, useEffect } from "react";
-import { auth, googleProvider } from "../../config/firebase";
-import {
-  createUserWithEmailAndPassword,
-  signInWithPopup,
-  signOut,
-  onAuthStateChanged,
-} from "firebase/auth";
+import React, { useState, useContext } from "react";
 import "./LoginPage.css";
+import { AuthContext } from "../../Context/AuthProvider";
+import { LogedUser } from "../../Components";
 function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [user, setUser] = useState(null);
 
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      if (user) {
-        // User is signed in
-        setUser(user);
-      } else {
-        // No user is signed in
-        setUser(null);
-      }
-    });
+  const { signIn, signInWithGoogle, logOut, user, Login } =
+    useContext(AuthContext);
+  const handleLogin = async () => {
+    try {
+      await Login(email, password);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+  const handleSignup = async () => {
+    try {
+      await signIn(email, password);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+  const handleSignInWithGoogle = async () => {
+    try {
+      await signInWithGoogle();
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
-    // Clean up the subscription when the component unmounts
-    return () => unsubscribe();
-  }, []);
-  const signIn = async () => {
+  const handleLogOut = async () => {
     try {
-      await createUserWithEmailAndPassword(auth, email, password);
+      await logOut();
     } catch (err) {
       console.error(err);
     }
   };
-  const signInWithGoogle = async () => {
-    try {
-      await signInWithPopup(auth, googleProvider);
-    } catch (err) {
-      console.error(err);
-    }
-  };
-  const logOut = async () => {
-    try {
-      await signOut(auth);
-    } catch (err) {
-      console.error(err);
-    }
-  };
+
   return (
     <div className="login__page__div">
-      <div className="login__form-control" >
-        <p className="login__title">Login</p>
-        <div className="login__input-field">
-          <input  className="login__input" type="text" onChange={(e) => setEmail(e.target.value)}/>
-          <label className="login__label" for="input">
-            Enter Email
-          </label>
-        </div>
-        <div class="login__input-field">
-          <input className="login__input" type="password" onChange={(e) => setPassword(e.target.value)}/>
-          <label className="login__label" for="input">
-            Enter Password
-          </label>
-        </div>
-  
-        <button onClick={signIn} className="login__submit-btn">Sign In</button>
-        <button onClick={signInWithGoogle} className="login__submit-btn">Sign In</button>
-        <button onClick={logOut} className="login__submit-btn">Sign In</button>
-      </div>
-      {user && (
-        <div>
-          <h3>User Data:</h3>
-          <p>Email: {user.email}</p>
-          <p>Display Name: {user.displayName}</p>
-          <p>UID: {user.uid}</p>
-          <p>Photo URL: {user.photoURL}</p>
+      {user ? (
+        <LogedUser/>
+      ) : (
+        <div className="login__form-control">
+          <p className="login__title">Login</p>
+          <div className="login__input-field">
+            <input
+              className="login__input"
+              type="text"
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <label className="login__label" for="input">
+              Enter Email
+            </label>
+          </div>
+          <div class="login__input-field">
+            <input
+              className="login__input"
+              type="password"
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <label className="login__label" for="input">
+              Enter Password
+            </label>
+          </div>
+
+          <button onClick={handleLogin} className="login__submit-btn">
+            Login
+          </button>
+          <button onClick={handleSignup} className="login__submit-btn">
+            Create new Account
+          </button>
+          <button
+            onClick={handleSignInWithGoogle}
+            className="login__submit-btn"
+          >
+            Googl login
+          </button>
+          <button onClick={handleLogOut} className="login__submit-btn">
+            Sign out
+          </button>
         </div>
       )}
     </div>
-
-    
   );
 }
 

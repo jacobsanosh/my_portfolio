@@ -1,13 +1,14 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import "./LoginPage.css";
 import { AuthContext } from "../../Context/AuthProvider";
-import { LogedUser } from "../../Components";
+import { useNavigate } from "react-router-dom";
 function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const { signIn, signInWithGoogle, logOut, user, Login } =
     useContext(AuthContext);
+    const navigate = useNavigate();
   const handleLogin = async () => {
     try {
       await Login(email, password);
@@ -37,12 +38,14 @@ function LoginPage() {
       console.error(err);
     }
   };
-
+  useEffect(() => {
+    if (user) {
+      console.log("user loged sucessfully",user);
+      navigate("/user");
+    }
+  }, [user]);
   return (
     <div className="login__page__div">
-      {user ? (
-        <LogedUser/>
-      ) : (
         <div className="login__form-control">
           <p className="login__title">Login</p>
           <div className="login__input-field">
@@ -84,7 +87,7 @@ function LoginPage() {
             Sign out
           </button>
         </div>
-      )}
+
     </div>
   );
 }

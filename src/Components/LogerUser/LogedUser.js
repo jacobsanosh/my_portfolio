@@ -3,12 +3,18 @@ import "./LogedUser.css";
 import { db } from "../../config/firebase";
 import { collection, addDoc } from "firebase/firestore";
 import { AuthContext } from "../../Context/AuthProvider";
+import { useNavigate } from 'react-router-dom';
 
 function LogedUser() {
+  const navigate = useNavigate();
   const [linkedin, setLinkedin] = useState("");
   const [aboutme, setAboutme] = useState("");
-  const { logOut, user } = useContext(AuthContext);
-
+  const { logOut, user,setUser } = useContext(AuthContext);
+  const handleLogout = () => {
+    logOut();
+    setUser(null)
+    navigate('/login');
+  };
   const handlePost = async () => {
     if (!linkedin || !aboutme) {
       console.log("invalid");
@@ -18,11 +24,14 @@ function LogedUser() {
         const usersCollection = collection(db, "users");
 
         const data = {
+          user_id:user.uid,
           linkedin,
           email: user.email,
           img_url: user.photoURL,
           name: user.displayName,
           aboutme,
+          is_accept:false,
+          is_admin:false
         };
 
         const docRef = await addDoc(usersCollection, data);
@@ -75,7 +84,7 @@ function LogedUser() {
         </button>
       </div>
 
-      <button onClick={logOut} className="logout__btn">
+      <button onClick={handleLogout} className="logout__btn">
         Logout
       </button>
     </div>

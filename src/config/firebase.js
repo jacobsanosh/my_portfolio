@@ -2,21 +2,22 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from 'firebase/auth';
 import * as firebase from 'firebase/app'; // Change this line
-
+import { getFirestore } from "firebase/firestore";
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAwCGs6TzjwQmOULqBTbHoGQ2m_kZ2VU6Y",
-  authDomain: "portfolio-5ed5a.firebaseapp.com",
-  projectId: "portfolio-5ed5a",
-  storageBucket: "portfolio-5ed5a.appspot.com",
-  messagingSenderId: "746004058161",
-  appId: "1:746004058161:web:0651f7864b8818e6988510",
-  measurementId: "G-2YX34B458V"
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID,
+  measurementId: process.env.REACT_APP_MEASUREMENT_ID
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const googleProvider = new GoogleAuthProvider();
 
-export default firebase;
+const db = getFirestore(app); 
+
+export { firebase, db };   

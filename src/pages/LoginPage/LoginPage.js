@@ -49,9 +49,10 @@ function LoginPage() {
             <input
               className="login__input"
               type="text"
+              id="inputemail"
               onChange={(e) => setEmail(e.target.value)}
             />
-            <label className="login__label" for="input">
+            <label className="login__label" for="inputemail">
               Enter Email
             </label>
           </div>
@@ -59,6 +60,7 @@ function LoginPage() {
             <input
               className="login__input"
               type="password"
+              id="input"
               onChange={(e) => setPassword(e.target.value)}
             />
             <label className="login__label" for="input">

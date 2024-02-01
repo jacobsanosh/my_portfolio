@@ -6,7 +6,7 @@ function LogedUser() {
   const [linkedin, setLinkedin] = useState("");
   const [aboutme, setAboutme] = useState("");
   const { logOut, user } = useContext(AuthContext);
-  const handleSubmit = () => {
+  const handlePost = () => {
     console.log("entered");
     // try {
     //   const usersRef = firebase.database().ref('users');
@@ -45,6 +45,7 @@ function LogedUser() {
           <label for="email">Linked in id</label>
           <input
             name="email"
+            id="email"
             type="text"
             onChange={(e) => setLinkedin(e.target.value)}
           />
@@ -55,13 +56,16 @@ function LogedUser() {
             required=""
             cols="50"
             rows="10"
+            id="textarea"
             name="textarea"
             onChange={(e) => setAboutme(e.target.value)}
           ></textarea>
         </div>
         <button
-          onClick={handleSubmit}
-          type="button"
+          onClick={()=>{
+            console.log("clicked")
+          }}
+          type="submit"
           className="form-submit-btn"
         >
           Post

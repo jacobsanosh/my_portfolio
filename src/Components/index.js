@@ -4,3 +4,5 @@ export {default as About} from './About/About.js';
 export {default as Mywork} from './My_Work/Mywork.js';
 export {default as Testimonial} from './Testimonials/Testimonial.js'
 export {default as LogedUser} from './LogerUser/LogedUser.js'
+export {default as Skills} from './Skills/Skills.js'
+export {default as Resume} from './Resume/Resume.js'

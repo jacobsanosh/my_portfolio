@@ -1,0 +1,35 @@
+.my__skills {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    height: max-content;
+}
+
+.icons__container {
+    width: 100%;
+    color: white;
+    padding: 3rem;
+    background: rgba( 0, 0, 0, 0.15);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+    backdrop-filter: blur( 20px);
+    -webkit-backdrop-filter: blur( 20px);
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    gap: 2rem;
+}
+
+.myskill__icon {
+    height: 7rem;
+    width: 7rem;
+}
+
+.myskill__details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}

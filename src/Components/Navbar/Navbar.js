@@ -47,9 +47,9 @@ function Navbar() {
           <NavLink to='home' smooth={true} duration={500} className="nav__link">Home</NavLink>
           <NavLink to='about' smooth={true} duration={500} offset={-200}className="nav__link">About</NavLink>
           <NavLink to='my_works' smooth={true} duration={500} offset={-200}className="nav__link">works</NavLink>
-          <NavLink to='/' smooth={true} duration={500} offset={-200}className="nav__link">Panelists</NavLink>
-          <NavLink to='/' smooth={true} duration={500} offset={-200}className="nav__link">Schedule</NavLink>
-          <NavLink to='/' smooth={true} duration={500} offset={-200}className="nav__link">Contact Us</NavLink>
+          <NavLink to='testimonials' smooth={true} duration={500} offset={-200}className="nav__link">References</NavLink>
+          <NavLink to='skills' smooth={true} duration={500} offset={-300}className="nav__link">skills</NavLink>
+          <NavLink to='resume' smooth={true} duration={500} offset={-500}className="nav__link">Resume</NavLink>
         </div>
         {/* <a href='https://rzp.io/l/finnext' target='_blank' rel="noreferrer">
           <button className="nav_btn">Register</button>

@@ -1,12 +1,15 @@
 .testimonialContainer {
-    background-color: white;
     width: 30rem;
     height: max-content;
-    border-radius: 20px;
-    box-shadow: 0 0 15px -6px black;
     margin: 1rem;
     padding: 1rem;
-    color: black;
+    color: white;
+    background: rgba( 0, 0, 0, 0.15);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+    backdrop-filter: blur( 20px);
+    -webkit-backdrop-filter: blur( 20px);
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18);
 }
 
 .imageContainer>img {
@@ -42,7 +45,7 @@
 }
 
 .icon {
-    fill: rgb(15, 16, 17);
+    fill: rgb(242, 242, 242);
 }
 
 .nameContainer {
@@ -67,7 +70,9 @@
     width: 80%;
     margin: 5rem auto;
     display: flex;
+    flex-direction: column;
     gap: 1rem;
+    justify-content: center;
 }
 
 .testimonial__card {

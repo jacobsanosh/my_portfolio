@@ -38,7 +38,7 @@ function Navbar() {
     <div className="navbar" style={notHome ? navStyle : navStyleHome}>
       <div className="navbar__main container">
         <div className="nav__logo">
-          <NavLink>
+          <NavLink to="home">
             <h1>SJ</h1>
           </NavLink>
         </div>
@@ -46,9 +46,9 @@ function Navbar() {
           
           <NavLink to='home' smooth={true} duration={500} className="nav__link">Home</NavLink>
           <NavLink to='about' smooth={true} duration={500} offset={-200}className="nav__link">About</NavLink>
-          <NavLink to='my_works' smooth={true} duration={500} offset={-200}className="nav__link">works</NavLink>
+          <NavLink to='my_works' smooth={true} duration={500} offset={-200}className="nav__link">Works</NavLink>
           <NavLink to='testimonials' smooth={true} duration={500} offset={-200}className="nav__link">References</NavLink>
-          <NavLink to='skills' smooth={true} duration={500} offset={-300}className="nav__link">skills</NavLink>
+          <NavLink to='skills' smooth={true} duration={500} offset={-300}className="nav__link">Skills</NavLink>
           <NavLink to='resume' smooth={true} duration={500} offset={-500}className="nav__link">Resume</NavLink>
         </div>
         {/* <a href='https://rzp.io/l/finnext' target='_blank' rel="noreferrer">
@@ -96,38 +96,38 @@ function Navbar() {
             <NavLink
               data-aos="fade-right"
               data-aos-duration="600"
-              to="speakers"
+              to="my_works"
               onClick={handleDrawerClose}
               className="navmob__link"
             >
-              Speakers
+              Works
             </NavLink>
             <NavLink
               data-aos="fade-right"
               data-aos-duration="800"
-              to="panelists"
+              to="testimonials"
               onClick={handleDrawerClose}
               className="navmob__link"
             >
-              Panelists
+              References
             </NavLink>
             <NavLink
               data-aos="fade-right"
               data-aos-duration="1000"
-              to="schedule"
+              to="skills"
               onClick={handleDrawerClose}
               className="navmob__link"
             >
-              Schedule
+              Skills
             </NavLink>
             <NavLink
               data-aos="fade-right"
               data-aos-duration="1400"
-              to="contact"
+              to="resume"
               onClick={handleDrawerClose}
               className="navmob__link"
             >
-              Contacts Us
+              Resume
             </NavLink>
           </div>
         </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import "./Landing.css";
 import myimg from "../../assets/myjpg.jpeg";
+
 import dots from "../../assets/svg/dots.svg";
 import Stars from "../Stars/Stars";
 import "animate.css";

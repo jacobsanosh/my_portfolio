@@ -12,6 +12,10 @@
     transition: 0.2s ease;
 }
 
+.nav__logo h1 {
+    cursor: pointer;
+}
+
 .navbar__main {
     /* background-color: #03012c; */
     height: 100%;

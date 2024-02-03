@@ -40,7 +40,7 @@ function LoginPage() {
   };
   useEffect(() => {
     if (user) {
-      console.log("user loged sucessfully",user);
+      // console.log("user loged sucessfully",user);
       navigate("/user");
     }
   }, [user]);
@@ -81,7 +81,7 @@ function LoginPage() {
             onClick={handleSignInWithGoogle}
             className="login__submit-btn"
           >
-            Googl login
+            Google login
           </button>
           <button onClick={handleLogOut} className="login__submit-btn">
             Sign out

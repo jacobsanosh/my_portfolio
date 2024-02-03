@@ -18,7 +18,7 @@ const AuthProvider = ({ children }) => {
       if (user) {
         // User is signed in
         setUser(user);
-        console.log(user);
+        // console.log(user);
         const q = query(collection(db, "users"), where("user_id", "==", user.uid));
 
         const querySnapshot = await getDocs(q);

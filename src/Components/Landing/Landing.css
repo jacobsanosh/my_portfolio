@@ -1,5 +1,9 @@
 .Main__div {
     width: 100%;
+    box-sizing: border-box;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .landing__div {
@@ -12,6 +16,7 @@
     align-items: center;
     padding: 3rem;
     margin: auto;
+    box-sizing: border-box;
 }
 
 .landing__img {
@@ -37,12 +42,94 @@
     margin-top: 25rem;
 }
 
+@media only screen and (max-width: 1300px) {
+    .landing__img {
+        width: 25rem;
+        height: 25rem;
+    }
+    .landing__div h1 {
+        font-size: 6rem;
+    }
+}
 
-/* 
+@media only screen and (max-width: 1200px) {
+    .landing__img {
+        width: 20rem;
+        height: 20rem;
+    }
+    .landing__div h1 {
+        font-size: 5rem;
+    }
+}
 
+@media only screen and (max-width: 1100px) {
+    .landing__div {
+        flex-direction: column;
+    }
+    .landing__top {
+        margin: 0px;
+    }
+    .landing__bottom {
+        margin: 0px;
+    }
+}
 
+@media screen and (max-width: 992px) {
+    .Main__div {
+        align-items: center;
+    }
+    .landing__div {
+        gap: 0;
+        height: max-content;
+    }
+    .landing__img {
+        width: 20rem;
+        height: 20rem;
+    }
+    .landing__div h1 {
+        font-size: 4rem;
+    }
+}
 
+@media screen and (max-width: 800px) {}
 
+@media screen and (max-width: 600px) {
+    .langing__dot {
+        height: 3rem;
+    }
+    .landing__img {
+        width: 18rem;
+        height: 18rem;
+    }
+    .landing__div h1 {
+        font-size: 3rem;
+    }
+}
 
+@media screen and (max-width: 500px) {
+    .landing__img {
+        width: 15rem;
+        height: 15rem;
+    }
+    .landing__div h1 {
+        font-size: 3rem;
+    }
+}
 
- */
+@media screen and (max-width: 450px) {
+    .landing__div h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .landing__div h1 {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {}
+
+@media only screen and (device-width: 768px) {}
+
+@media (min-device-width: 20px) and (max-device-width: 500px) {}

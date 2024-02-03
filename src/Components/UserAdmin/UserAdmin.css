@@ -1,0 +1,46 @@
+.admin__page {
+    width: 80%;
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin__div {
+    width: 100%;
+    padding: 2rem;
+    background: rgba( 0, 0, 0, 0.15);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+    backdrop-filter: blur( 20px);
+    -webkit-backdrop-filter: blur( 20px);
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18);
+}
+
+.about__table {
+    width: 100%;
+    background: rgba( 0, 0, 0, 0.15);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+    backdrop-filter: blur( 20px);
+    -webkit-backdrop-filter: blur( 20px);
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18);
+    text-align: center;
+    margin: 1rem;
+}
+
+.about__table td {
+    background: rgba( 0, 0, 0, 0.15);
+    color: white;
+    border: 1px solid rgba( 255, 255, 255, 0.18);
+}
+
+.about__table tr:nth-child(even) {
+    background: rgba( 0, 0, 0, 0.15);
+    color: white;
+}
+
+.about__table img {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+}

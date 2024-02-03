@@ -1,35 +1,26 @@
-import React, { useContext } from 'react';
+import React, { useContext,useEffect } from 'react';
 import './UserPage.css';
-import { AuthContext } from '../../Context/AuthProvider';
-import { LogedUser } from '../../Components';
+import { AuthContext } from "../../Context/AuthProvider";
+import { LogedUser, UserAdmin } from '../../Components';
 import { useNavigate } from 'react-router-dom';
 
 function UserPage() {
   const navigate = useNavigate();
-  const { user, logOut ,setUser} = useContext(AuthContext);
+  const { user} = useContext(AuthContext);
 
-//   useEffect(() => {
-//     if (!user) {
-//       navigate('/login');
-//     }
-//   }, [user, navigate]);
+  useEffect(() => {
+    if (!user) {
+      navigate('/login');
+    }
+  }, [user]);
 
-  const handleLogout = () => {
-    logOut();
-    setUser(null)
-    navigate('/login');
-  };
+  
 
   if(user){
     return (
         <div>
           {user && user.is_admin ? (
-            <>
-              <h1>hello admin sir</h1>
-              <button onClick={handleLogout} className="login__submit-btn">
-                Sign out
-              </button>
-            </>
+            <UserAdmin/>
           ) : (
             <LogedUser />
           )}

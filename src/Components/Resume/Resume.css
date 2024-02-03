@@ -69,6 +69,7 @@
     -webkit-backdrop-filter: blur( 20px);
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18);
+    box-sizing: border-box;
 }
 
 .timeline__container a {
@@ -79,6 +80,14 @@
 }
 
 .timeline__container button {
+    filter: drop-shadow(2px 2px 3px #0003);
+    font-family: "Poppins", sans-serif;
+    display: block;
+    padding: 12px 20px;
+    margin: 2px auto;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.2s;
     width: 10rem;
     height: 3rem;
     color: white;
@@ -89,6 +98,15 @@
     -webkit-backdrop-filter: blur( 20px);
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18);
+}
+
+.timeline__container button:hover {
+    transform: scale(1.1, 1.1);
+}
+
+.timeline__container button:active {
+    transform: scale(1.1, 1.1);
+    filter: sepia(0.5);
 }
 
 .timeline__section {
@@ -157,7 +175,7 @@
         color: #ffff;
     }
     .timeline__container {
-        width: 90%;
+        width: 100%;
     }
     .vertical-timeline-element-content {
         width: 75%;
@@ -186,11 +204,11 @@
         font-size: 0.8rem;
     }
     .vertical-timeline-element-content {
-        width: 55%;
+        width: 100%;
         margin-left: 6%;
     }
     .vertical-timeline {
-        margin-left: 18%;
+        margin-left: -6%;
     }
     .timeline__section {
         margin-top: 0%;
@@ -205,11 +223,11 @@
         color: #ffff;
     }
     .vertical-timeline-element-content {
-        width: 38%;
+        width: 100%;
         margin-left: 6%;
     }
     .vertical-timeline {
-        margin-left: 26%;
+        margin-left: -6%;
     }
 }
 
@@ -221,12 +239,15 @@
         color: #ffff;
     }
     .vertical-timeline-element-content {
-        width: 33%;
-        margin-left: 4%;
+        width: 100%;
+        margin-left: 14%;
     }
     .vertical-timeline {
-        margin-left: 31%;
+        margin-left: 4%;
     }
+    /* .timeline__element_txt {
+        width: 10rem;
+    } */
 }
 
 @media (min-device-width: 20px) and (max-device-width: 500px) {
@@ -238,6 +259,13 @@
     }
     .vertical-timeline-element-content {
         max-height: 35vh;
+    }
+    .timeline {
+        width: 90%;
+    }
+    .vertical-timeline-element-title {
+        margin: 0px;
+        font-size: 1rem;
     }
 }
 

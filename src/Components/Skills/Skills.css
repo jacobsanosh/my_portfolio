@@ -4,12 +4,13 @@
     flex-direction: column;
     margin: auto;
     height: max-content;
+    box-sizing: border-box;
 }
 
 .icons__container {
     width: 100%;
     color: white;
-    padding: 3rem;
+    padding: 2rem;
     background: rgba( 0, 0, 0, 0.15);
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
     backdrop-filter: blur( 20px);
@@ -19,7 +20,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     place-items: center;
-    gap: 2rem;
+    box-sizing: border-box;
 }
 
 .myskill__icon {
@@ -32,4 +33,54 @@
     flex-direction: column;
     width: 100%;
     align-items: center;
+}
+
+@media (min-device-width: 20px) and (max-device-width: 500px) {}
+
+@media only screen and (max-width: 1200px) {
+    .icons__container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .icons__container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .myskill__icon {
+        height: 5rem;
+        width: 5rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .icons__container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .myskill__icon {
+        height: 4rem;
+        width: 4rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .icons__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .myskill__icon {
+        height: 3rem;
+        width: 3rem;
+    }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {}
+
+@media only screen and (device-width: 768px) {
+    .myskill__icon {
+        height: 5rem;
+        width: 5rem;
+    }
+    .icons__container {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }

@@ -19,7 +19,7 @@ function LogedUser() {
     if (!linkedin || !aboutme) {
       console.log("invalid");
     } else {
-      console.log("Entered handleSubmit");
+      // console.log("Entered handleSubmit");
       try {
         const usersCollection = collection(db, "users");
 
@@ -35,7 +35,10 @@ function LogedUser() {
         };
 
         const docRef = await addDoc(usersCollection, data);
-        console.log("Document written with ID: ", docRef.id);
+        // console.log("Document written ");
+        setUser(null)
+        logOut();
+        navigate('/')
       } catch (error) {
         console.error("Error adding document: ", error);
       }
@@ -44,7 +47,7 @@ function LogedUser() {
 
   return (
     <div className="userDetails">
-      <h3>User Data:</h3>
+      <h3>Profile</h3>
       <p>Email: {user.email}</p>
       <p>Hello {user.displayName}</p>
       {user && user.photoURL && (
@@ -52,7 +55,7 @@ function LogedUser() {
           src={user.photoURL}
           alt="User"
           className="user__img"
-          referrerpolicy="no-referrer" // It seems like there's a typo here, it should be "referrerPolicy"
+          referrerpolicy="no-referrer" 
         />
       )}
 
@@ -64,7 +67,8 @@ function LogedUser() {
             name="email"
             id="email"
             type="text"
-            onChange={(e) => setLinkedin(e.target.value)}
+            onChange={(e) => setLinkedin(e.target.value)
+            }
           />
         </div>
         <div className="form-group">
@@ -76,6 +80,7 @@ function LogedUser() {
             rows="10"
             id="textarea"
             name="textarea"
+            maxlength="200"
             onChange={(e) => setAboutme(e.target.value)}
           ></textarea>
         </div>

@@ -1,6 +1,6 @@
 .testimonialContainer {
     width: 30rem;
-    height: max-content;
+    height: 13rem;
     margin: 1rem;
     padding: 1rem;
     color: white;
@@ -53,6 +53,11 @@
     text-align: left;
 }
 
+.nameContainer a {
+    text-decoration: none;
+    color: white;
+}
+
 .testimonialBodyText {
     font-size: 1rem;
 }
@@ -77,4 +82,11 @@
 
 .testimonial__card {
     margin-left: 5rem;
+}
+
+@media screen and (max-width: 600px) {
+    .testimonialContainer {
+        width: 20rem;
+        height: 15rem;
+    }
 }

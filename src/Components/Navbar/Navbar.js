@@ -50,6 +50,7 @@ function Navbar() {
           <NavLink to='testimonials' smooth={true} duration={500} offset={-200}className="nav__link">References</NavLink>
           <NavLink to='skills' smooth={true} duration={500} offset={-300}className="nav__link">Skills</NavLink>
           <NavLink to='resume' smooth={true} duration={500} offset={-500}className="nav__link">Resume</NavLink>
+          <NavLink to='contact' smooth={true} duration={500} offset={-400}className="nav__link">Contact</NavLink>
         </div>
         {/* <a href='https://rzp.io/l/finnext' target='_blank' rel="noreferrer">
           <button className="nav_btn">Register</button>
@@ -128,6 +129,15 @@ function Navbar() {
               className="navmob__link"
             >
               Resume
+            </NavLink>
+            <NavLink
+              data-aos="fade-right"
+              data-aos-duration="1400"
+              to="contact"
+              onClick={handleDrawerClose}
+              className="navmob__link"
+            >
+              Contact
             </NavLink>
           </div>
         </div>

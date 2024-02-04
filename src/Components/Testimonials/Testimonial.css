@@ -5,7 +5,7 @@
 
 .testimonialContainer {
     width: 30rem;
-    height: 18rem;
+    height: 15rem;
     margin: 1rem;
     padding: 1rem;
     color: white;
@@ -91,7 +91,7 @@
 
 @media screen and (max-width: 600px) {
     .testimonialContainer {
-        width: 20rem;
-        height: 15rem;
+        height: 18rem;
+        width: 22rem;
     }
 }

@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.9c31f8be.css",
+    "main.css": "/static/css/main.f61e8e31.css",
     "main.js": "/static/js/main.9c55fb58.js",
     "static/js/787.128fc6e9.chunk.js": "/static/js/787.128fc6e9.chunk.js",
     "static/media/sanoshIHRD.pdf": "/static/media/sanoshIHRD.93b673f6628a4b3c4a8d.pdf",
@@ -29,12 +29,12 @@
     "static/media/accept.svg": "/static/media/accept.b6f55fcadc8224b4fe4dc44654e30edd.svg",
     "static/media/html-5.svg": "/static/media/html-5.6d3bbe96a0610c287f305ecaf5824e36.svg",
     "static/media/dots.svg": "/static/media/dots.39127d1d8cccbd039a05fdc3c038b3e1.svg",
-    "main.9c31f8be.css.map": "/static/css/main.9c31f8be.css.map",
+    "main.f61e8e31.css.map": "/static/css/main.f61e8e31.css.map",
     "main.9c55fb58.js.map": "/static/js/main.9c55fb58.js.map",
     "787.128fc6e9.chunk.js.map": "/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9c31f8be.css",
+    "static/css/main.f61e8e31.css",
     "static/js/main.9c55fb58.js"
   ]
 }

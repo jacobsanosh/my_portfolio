@@ -3,7 +3,7 @@ import TestimonialCard from "./TestimonialCard";
 import Marquee from "react-fast-marquee";
 import { db } from "../../config/firebase";
 import { collection, query, where, getDocs } from "firebase/firestore";
-
+import './Testimonial.css'
 function Testimonial() {
   const [userData, setUserData] = useState([]);
 

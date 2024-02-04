@@ -1,10 +1,12 @@
-import React,{useEffect,useState} from "react";
+import React, { useEffect, useState } from "react";
 import TestimonialCard from "./TestimonialCard";
 import Marquee from "react-fast-marquee";
 import { db } from "../../config/firebase";
-import { collection, query, where, getDocs, setDoc, deleteDoc, doc } from "firebase/firestore";
+import { collection, query, where, getDocs } from "firebase/firestore";
+
 function Testimonial() {
   const [userData, setUserData] = useState([]);
+
   async function fetchData() {
     const q = query(
       collection(db, "users"),
@@ -18,13 +20,22 @@ function Testimonial() {
     });
     setUserData(userDataArray);
   }
+
   useEffect(() => {
     fetchData();
   }, []);
-  return (
-    <div className="tesimonial__div" id="testimonials" data-aos-delay="200"
-    data-aos-offset="200"
-    data-aos="zoom-in">
+
+  // Check if there is any user data
+  const hasUserData = userData.length > 0;
+
+  return hasUserData ? (
+    <div
+      className="testimonial__div"
+      id="testimonials"
+      data-aos-delay="200"
+      data-aos-offset="200"
+      data-aos="zoom-in"
+    >
       <h1 className="about__me">Let's see what others are saying</h1>
       <Marquee
         direction="left"
@@ -33,13 +44,12 @@ function Testimonial() {
         style={{ textAlign: "center" }}
         pauseOnHover={true}
       >
-        {userData.map((item)=>(
-          
-        <TestimonialCard data={item.data}/>
+        {userData.map((item) => (
+          <TestimonialCard key={item.id} data={item.data} />
         ))}
       </Marquee>
     </div>
-  );
+  ) : null;
 }
 
 export default Testimonial;

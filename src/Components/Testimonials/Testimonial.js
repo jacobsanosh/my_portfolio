@@ -48,6 +48,7 @@ function Testimonial() {
           <TestimonialCard key={item.id} data={item.data} />
         ))}
       </Marquee>
+      <a href='/login' className="talk">Do you wanna talk about me</a>
     </div>
   ) : null;
 }

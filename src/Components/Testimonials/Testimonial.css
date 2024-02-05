@@ -85,6 +85,12 @@
     justify-content: center;
 }
 
+.talk {
+    float: right;
+    text-decoration: underline;
+    color: white;
+}
+
 .testimonial__card {
     margin-left: 5rem;
 }
@@ -93,5 +99,8 @@
     .testimonialContainer {
         height: 18rem;
         width: 22rem;
+    }
+    .talk {
+        font-size: .7rem;
     }
 }

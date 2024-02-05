@@ -39,10 +39,11 @@ function Testimonial() {
       <h1 className="about__me">Let's see what others are saying</h1>
       <Marquee
         direction="left"
-        speed={150}
+        speed={50}
         delay={-10}
         style={{ textAlign: "center" }}
         pauseOnHover={true}
+  
       >
         {userData.map((item) => (
           <TestimonialCard key={item.id} data={item.data} />

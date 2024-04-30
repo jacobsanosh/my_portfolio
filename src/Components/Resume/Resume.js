@@ -7,7 +7,7 @@ import "react-vertical-timeline-component/style.min.css";
 import "./Resume.css";
 import Aos from "aos";
 import { myresume_data, intership } from "../../data/myresume_data";
-import myresume from "../../assets/sanoshOffcampus.pdf";
+import myresume from "../../assets/myOffcampus.pdf";
 const Resume = () => {
   useEffect(() => {
     Aos.init({ duration: 1100 });

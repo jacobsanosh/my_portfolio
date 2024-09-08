@@ -25,23 +25,31 @@ export const myresume_data = [
       stream: "Bachelor's Degree in Computer Science",
       branch: "Computer Science",
       board: "KTU",
-      school: "Govt.Model Engineering College",
-      percentage: "7.7 CGPA",
+      school: "Govt. Model Engineering College",
+      percentage: "8 CGPA",
     },
   ];
   
   export const intership = [
     {
       id: 4,
-      type: "intership",
+      type: "internship",
+      Company: "Codehall",
+      Role: "Software Engineer intern",
+      date: "August 2024",
+    
+    },
+    {
+      id: 5,
+      type: "internship",
       Company: "Neuro Tech Pvt Ltd",
       Role: "SDE intern",
       date: "May-2023",
       certificate:neurotech
     },
     {
-      id: 5,
-      type: "intership",
+      id: 6,
+      type: "internship",
       Company: "Labour Commissionerate Government of Kerala",
       Role: "Full Stack Developer",
       date: "April-2023",

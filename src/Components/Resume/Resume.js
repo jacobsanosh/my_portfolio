@@ -7,7 +7,7 @@ import "react-vertical-timeline-component/style.min.css";
 import "./Resume.css";
 import Aos from "aos";
 import { myresume_data, intership } from "../../data/myresume_data";
-import myresume from "../../assets/sanoshjacob.pdf";
+import myresume from "../../assets/jacobsanosh.pdf";
 const Resume = () => {
   useEffect(() => {
     Aos.init({ duration: 1100 });
@@ -78,7 +78,7 @@ const Resume = () => {
 
         {/* intership */}
         <div className="timeline__section" data-aos="zoom-in">
-          <h2 className="section__title">interships</h2>
+          <h2 className="section__title">internships</h2>
 
           <VerticalTimeline theme={customTheme} lineColor="#21b8cb">
             {intership.map((item) => (
@@ -104,9 +104,14 @@ const Resume = () => {
                   <h3 className="vertical-timeline-element-title">
                     {item.school}
                   </h3>
-                  <a href={item.certificate} className="intership__certificate">
-                    View internship Certificate
-                  </a>
+                  {item.certificate && (
+                    <a
+                      href={item.certificate}
+                      className="intership__certificate"
+                    >
+                      View internship Certificate
+                    </a>
+                  )}
                 </div>
               </VerticalTimelineElement>
             ))}

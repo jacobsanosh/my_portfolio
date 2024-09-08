@@ -49,7 +49,7 @@ function Contact() {
         <div id="contact">
           <div className="contact-box">
             <div className="contact-links">
-              <h2 className="about__me">CONTACT</h2>
+              <h2 className="about__me">Contact</h2>
               <div className="links">
                 <div className="link">
                   <a href="https://www.linkedin.com/in/sanoshjacob/">

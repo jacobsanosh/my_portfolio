@@ -78,7 +78,7 @@ const Resume = () => {
 
         {/* intership */}
         <div className="timeline__section" data-aos="zoom-in">
-          <h2 className="section__title">internships</h2>
+          <h2 className="section__title">Internships</h2>
 
           <VerticalTimeline theme={customTheme} lineColor="#21b8cb">
             {intership.map((item) => (
@@ -109,7 +109,7 @@ const Resume = () => {
                       href={item.certificate}
                       className="intership__certificate"
                     >
-                      View internship Certificate
+                      View Internship Certificate
                     </a>
                   )}
                 </div>

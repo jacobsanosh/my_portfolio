@@ -19,7 +19,7 @@ function Landing() {
           <img src={dots} alt="" className="langing__dot" />
           <img src={myimg} className="landing__img" alt="" />
         </div>
-        <h1 className="landing__bottom">i'm Sanosh.</h1>
+        <h1 className="landing__bottom">I'm Sanosh.</h1>
       </div>
       <div className="stars">
       <Stars/>

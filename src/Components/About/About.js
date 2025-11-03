@@ -5,8 +5,9 @@ function About() {
     <div id="about">
     <div className="about__div"  data-aos-delay='200' data-aos-offset='200'data-aos="zoom-in" >
       <h2 className="about__me">
-        Experienced software developer with years of expertise, specializing
-        in crafting websites and mobile experiences for various projects.
+      I'm a full stack developer passionate about building scalable and efficient web applications.
+      I work across the stack with React, FastAPI, Go, Docker, and Kubernetes.
+      I love solving real-world problems through clean architecture and automation.
       </h2>
       <div className="scoaial__media">
         <div className="social__let">

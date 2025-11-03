@@ -6,8 +6,8 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import "./Resume.css";
 import Aos from "aos";
-import { myresume_data, intership } from "../../data/myresume_data";
-import myresume from "../../assets/jacobsanosh.pdf";
+import { myresume_data, intership, fulltime } from "../../data/myresume_data";
+import myresume from "../../assets/sanosh.pdf";
 const Resume = () => {
   useEffect(() => {
     Aos.init({ duration: 1100 });
@@ -40,11 +40,13 @@ const Resume = () => {
           >
             <button>Download</button>
           </a>
-          <h2 className="section__title">Education</h2>
-
+            {/* Full Time */}
+        <div className="timeline__section" data-aos="zoom-in">
+          <h2 className="section__title">Full Time</h2>
           <VerticalTimeline theme={customTheme} lineColor="#21b8cb">
-            {myresume_data.map((item) => (
+            {fulltime.map((item) => (
               <VerticalTimelineElement
+                key={item.id}
                 className="vertical-timeline-element--work "
                 contentStyle={{
                   color: "#ffff",
@@ -53,33 +55,37 @@ const Resume = () => {
                 }}
                 contentArrowStyle={{ display: "none" }}
               >
-                <div className="timeline__element_txt" key={item.id}>
+                <div className="timeline__element_txt">
                   <h3 className="vertical-timeline-element-title">
-                    {item.stream}
+                    {item.Company}
                   </h3>
                   <h3 className="vertical-timeline-element-title">
-                    {item.branch}
+                    {item.Role}
                   </h3>
                   <h3 className="vertical-timeline-element-title">
-                    {item.board}
+                    {item.date}
                   </h3>
-                  <h3 className="vertical-timeline-element-title">
-                    {item.school}
-                  </h3>
-
-                  <p className="timeline__para" style={{ fontSize: "1.25rem" }}>
-                    {item.percentage}
-                  </p>
+                  {item.school && (
+                    <h3 className="vertical-timeline-element-title">
+                      {item.school}
+                    </h3>
+                  )}
+                  {item.certificate && (
+                    <a
+                      href={item.certificate}
+                      className="intership__certificate"
+                    >
+                      View Certificate
+                    </a>
+                  )}
                 </div>
               </VerticalTimelineElement>
             ))}
           </VerticalTimeline>
         </div>
-
-        {/* intership */}
+          {/* intership */}
         <div className="timeline__section" data-aos="zoom-in">
           <h2 className="section__title">Internships</h2>
-
           <VerticalTimeline theme={customTheme} lineColor="#21b8cb">
             {intership.map((item) => (
               <VerticalTimelineElement
@@ -117,6 +123,44 @@ const Resume = () => {
             ))}
           </VerticalTimeline>
         </div>
+        
+          <h2 className="section__title">Education</h2>
+
+          <VerticalTimeline theme={customTheme} lineColor="#21b8cb">
+            {myresume_data.map((item) => (
+              <VerticalTimelineElement
+                className="vertical-timeline-element--work "
+                contentStyle={{
+                  color: "#ffff",
+                  background: "transparent",
+                  border: border,
+                }}
+                contentArrowStyle={{ display: "none" }}
+              >
+                <div className="timeline__element_txt" key={item.id}>
+                  <h3 className="vertical-timeline-element-title">
+                    {item.stream}
+                  </h3>
+                  <h3 className="vertical-timeline-element-title">
+                    {item.branch}
+                  </h3>
+                  <h3 className="vertical-timeline-element-title">
+                    {item.board}
+                  </h3>
+                  <h3 className="vertical-timeline-element-title">
+                    {item.school}
+                  </h3>
+
+                  <p className="timeline__para" style={{ fontSize: "1.25rem" }}>
+                    {item.percentage}
+                  </p>
+                </div>
+              </VerticalTimelineElement>
+            ))}
+          </VerticalTimeline>
+        </div>
+
+        
       </div>
     </div>
   );

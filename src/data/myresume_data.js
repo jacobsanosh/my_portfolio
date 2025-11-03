@@ -56,4 +56,14 @@ export const myresume_data = [
       certificate:IHRD
     },
   ];
+
+  export const fulltime = [
+    {
+      id: 7,
+      type: "fulltime",
+      Company: "Rootflo",
+      Role: "Software Engineer",
+      date: "2024 - Present",
+    },
+  ];
   

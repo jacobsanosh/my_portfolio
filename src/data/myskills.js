@@ -24,6 +24,10 @@ import docker from '../assets/skills/docker.svg'
 import bitbucket from '../assets/skills/bitbucket.svg'
 import streamlit from '../assets/skills/streamlit.svg'
 import linux from '../assets/skills/linux.svg'
+import go from '../assets/skills/go.svg'
+import kub from '../assets/skills/kub.svg'
+import azure from '../assets/skills/azure.svg'
+
 export const myskills = [
   { id: 1, skill: 'C', icon: c },
   { id: 2, skill: 'C++', icon: cplus },
@@ -51,6 +55,9 @@ export const myskills = [
   { id: 24, skill: 'Bitbucket', icon: bitbucket },
   { id: 25, skill: 'Streamlit', icon: streamlit },
   { id: 26, skill: 'Linux', icon: linux },
+  { id: 27, skill: 'Kubernetes', icon: kub },
+  { id: 28, skill: 'Go', icon: go },
+  { id: 29, skill: 'Azure', icon: azure },
 ];
 
 // export default myskills;
